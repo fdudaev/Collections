@@ -1,8 +1,6 @@
 package com.farrukhzaripov._collections;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 public class Theatre {
@@ -29,6 +27,26 @@ public class Theatre {
     }
 
     public boolean reserveSeat(String seatNumber) {
+        int low = 0;
+        int high = seats.size() - 1;
+
+        while (low <= high) {
+            System.out.println(".");
+            int mid = (low + high) / 2;
+            Seat midVal = seats.get(mid);
+            int cmp = midVal.getSeatNumber().compareTo(seatNumber);
+
+            if (cmp < 0) {
+                low = mid + 1;
+            } else if (cmp > 0) {
+                high = mid - 1;
+            } else {
+                return seats.get(mid).reserved;
+            }
+        }
+        System.out.println("there is no seat "+seatNumber);
+        return false;
+    /*public boolean reserveSeat(String seatNumber) {
         Seat requestedSeat = new Seat(seatNumber);
         int foundSeat = Collections.binarySearch(seats, requestedSeat, null );
         if (foundSeat >= 0){
@@ -36,8 +54,9 @@ public class Theatre {
         }else{
             System.out.println("there is no seat "+seatNumber);
             return false;
-        }
+        }*/
     }
+
     public void getSeat() {
         for (Seat seat : seats) {
             System.out.println(seat.getSeatNumber());
