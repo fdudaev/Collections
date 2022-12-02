@@ -1,0 +1,14 @@
+Java Collection framework:
+At the top level of collection framework is Collection Class.
+Interfaces in collection framework are allowing collection to extend. They define methods.
+Main component of the collection framework are interfaces.
+List Types:
+
+1. List --> interface
+2. Array List
+3. Linked List classes
+4. Sets --> interface
+5. Maps
+6. Trees
+7. Queues --> interface
+
