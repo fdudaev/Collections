@@ -3,6 +3,11 @@ At the top level of collection framework is Collection Class.
 Interfaces in collection framework are allowing collection to extend. They define methods.
 Main component of the collection framework are interfaces.
 Binary search
+Methods in Collection interface:
+--> Collections.reverseAll(); - to reverse the order
+--> Collections.shuffle(); - to shuffle in random order
+--> Collections.min(); - to return the least number
+--> Collections.max(); - to return the highest number
 
 List Types:
 

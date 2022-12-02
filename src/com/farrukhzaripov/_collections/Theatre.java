@@ -6,7 +6,7 @@ import java.util.List;
 public class Theatre {
 
     private final String theatreName;
-    private List<Seat> seats = new ArrayList<>(); // we can use ArrayList or LinkedList
+    public List<Seat> seats = new ArrayList<>(); // we can use ArrayList or LinkedList
     // private Collection<Seat> seats = new HashSet<>(); // by making Collection java will enable us any of collection classes.
     //private Collection<Seat> seats = new LinkedHashSet<>(); // by making Collection java will enable us any of collection classes.
 
@@ -31,7 +31,7 @@ public class Theatre {
         int high = seats.size() - 1;
 
         while (low <= high) {
-            System.out.println(".");
+            System.out.print(".");
             int mid = (low + high) / 2;
             Seat midVal = seats.get(mid);
             int cmp = midVal.getSeatNumber().compareTo(seatNumber);
@@ -41,7 +41,7 @@ public class Theatre {
             } else if (cmp > 0) {
                 high = mid - 1;
             } else {
-                return seats.get(mid).reserved;
+                return seats.get(mid).reserved();
             }
         }
         System.out.println("there is no seat "+seatNumber);
@@ -63,7 +63,7 @@ public class Theatre {
         }
     }
 
-    private class Seat implements Comparable<Seat> {
+    public class Seat implements Comparable<Seat> {
         private final String seatNumber;
         private boolean reserved = false;
 
