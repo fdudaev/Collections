@@ -1,13 +1,19 @@
 Java Collection framework:
+java.util.* <Package> --> iterable <Interface> --> Collection --> <Interface> -->List <Interface> --> ArrayList <Class> --> LinkedList <Class>
+java.util.* <Package> --> iterable <Interface> --> Collection --> <Interface> -->Queue <Interface> --> PriorityQueue <Class>
+java.util.* <Package> --> iterable <Interface> --> Collection --> <Interface> -->Set <Interface> --> HashSet <Class>
+What is Collection? --> is a framework
 At the top level of collection framework is Collection Class.
 Interfaces in collection framework are allowing collection to extend. They define methods.
 Main component of the collection framework are interfaces.
 Binary search
-Methods in Collection interface:
+Methods in Collection interface for List:
 --> Collections.reverseAll(); - to reverse the order
 --> Collections.shuffle(); - to shuffle in random order
 --> Collections.min(); - to return the least number
 --> Collections.max(); - to return the highest number
+--> Collections.swap(); - to swap two elements in a list
+--> Collections.copy(destination, source list); - takes two parameters, destination (collection, iterable or list && source list (must be a list);
 
 List Types:
 
