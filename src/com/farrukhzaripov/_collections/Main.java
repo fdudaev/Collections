@@ -7,6 +7,9 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
+        TestAbs bas = new TestAbs(45645665, "Bilal", "Farrukhi", 2);
+        bas.about();
+
         Theatre theatre = new Theatre("AMC", 8, 12);
 
         if (theatre.reserveSeat("D12")) {

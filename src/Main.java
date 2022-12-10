@@ -1,15 +1,25 @@
 import com.farrukhzaripov._collections.Theatre;
 import com.sun.source.tree.BreakTree;
 
+import java.lang.reflect.Array;
 import java.net.Inet4Address;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
 
+        List<String> names = new ArrayList<>();
+        Set<Integer> age = new HashSet<>();
+        names.add("Bilal");
+        names.add("Aisha");
+        names.add("Aliya");
+        names.add("Aliya");
+        names.set(3, " Nilu");
+        age.add(2);
+        age.add(10);
+        age.add(6);
+        age.add(9);
+        System.out.println(names+ " " + age);
 
         HashMap<String, Double> expenses = new HashMap<>();
 
